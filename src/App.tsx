@@ -1,4 +1,5 @@
 import { useState, useEffect, useMemo } from 'react'
+import quotesData from './quotes.json'
 
 interface Task {
   id: number
@@ -6,28 +7,12 @@ interface Task {
   completed: boolean
 }
 
-const quotes = [
-  { text: "The only failure is not to try.", author: "Virgil Abloh" },
-  { text: "Conhece-te a ti mesmo.", author: "Sócrates" },
-  { text: "A vida não examinada não vale a pena ser vivida.", author: "Sócrates" },
-  { text: "Só sei que nada sei.", author: "Sócrates" },
-  { text: "Penso, logo existo.", author: "René Descartes" },
-  { text: "A simplicidade é o último grau de sofisticação.", author: "Leonardo da Vinci" },
-  { text: "O homem é a medida de todas as coisas.", author: "Protágoras" },
-  { text: "A felicidade depende de nós mesmos.", author: "Aristóteles" },
-  { text: "Nós somos aquilo que fazemos repetidamente.", author: "Aristóteles" },
-  { text: "Deus está morto.", author: "Friedrich Nietzsche" },
-  { text: "Aquele que tem um porquê para viver pode suportar quase qualquer como.", author: "Friedrich Nietzsche" },
-  { text: "O inferno são os outros.", author: "Jean-Paul Sartre" },
-  { text: "A liberdade é o que você faz com o que fizeram de você.", author: "Jean-Paul Sartre" },
-  { text: "O importante não é aquilo que fazem de nós, mas o que nós mesmos fazemos do que os outros fizeram de nós.", author: "Jean-Paul Sartre" },
-  { text: "Torne-se quem você é.", author: "Friedrich Nietzsche" },
-  { text: "Não é a consciência do homem que lhe determina o ser, mas o ser social que lhe determina a consciência.", author: "Karl Marx" },
-  { text: "Age de tal modo que a máxima de tua ação possa ser elevada a lei universal.", author: "Immanuel Kant" },
-  { text: "A imaginação é mais importante que o conhecimento.", author: "Albert Einstein" },
-  { text: "Quem controla o passado, controla o futuro. Quem controla o presente, controla o passado.", author: "George Orwell" },
-  { text: "A persistência é o caminho do êxito.", author: "Charles Chaplin" },
-]
+interface Quote {
+  text: string
+  author?: string
+}
+
+const quotes: Quote[] = quotesData
 
 function getGreeting(): string {
   const hour = new Date().getHours()
@@ -103,7 +88,7 @@ function App() {
         </p>
       </div>
 
-      {/* Input */}
+      {/* Input da tarefa */}
       <div className="flex gap-3 mb-6 items-center max-sm:flex-col shrink-0">
         <input
           id="inputTask"
@@ -177,14 +162,14 @@ function App() {
         </div>
       )}
 
-      {/* Quote */}
+      {/* Frases */}
       <div className="text-left italic text-sm text-[var(--text-muted)] mt-4 pb-2 leading-relaxed shrink-0">
-        "{randomQuote.text}" – {randomQuote.author}
+        "{randomQuote.text}"{randomQuote.author ? ` – ${randomQuote.author}` : ''}
       </div>
 
-      {/* Repo */}
+      {/* Repositório */}
       <a
-        href="https://github.com/pedro/simplelist"
+        href="https://github.com/KachanChK/Simplelist"
         target="_blank"
         rel="noopener noreferrer"
         className="hidden md:flex fixed bottom-6 right-6 flex-col items-center gap-1 no-underline text-[var(--text-muted)] transition-colors duration-200 hover:text-[var(--primary)]"

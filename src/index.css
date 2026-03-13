@@ -11,7 +11,7 @@
 }
 
 :root {
-  /* Light Mode */
+  /* Modo claro */
   --bg: #EFEFEF;
   --primary: #171717;
   --secondary: #636363;
@@ -37,7 +37,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    /* Dark Mode - Inverted */
+    /* Modo escuro - Inverted */
     --bg: #171717;
     --primary: #EFEFEF;
     --secondary: #636363;

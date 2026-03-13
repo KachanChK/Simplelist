@@ -2,7 +2,7 @@
 
 Simplelist - Keep it simple. Minimalista e focado no essencial.
 
-![Simplelist Preview](./public/screenshot.png)
+![Simplelist Preview](./public/shots.png)
 
 ## Funcionalidades
 
@@ -49,4 +49,4 @@ Leia nosso [Guia de Contribuição](CONTRIBUTING.md) para saber como começar.
 Distribuído sob a licença MIT.
 
 ---
-Feito por [Kachan](https://github.com/KachanChK).
+Feito por [Pedro Kachan](https://github.com/KachanChK).
