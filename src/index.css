@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: var(--bg);
+  --color-foreground: var(--text);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-border: var(--border);
+  
+  --font-sans: 'DM Sans', system-ui, -apple-system, sans-serif;
+}
+
+:root {
+  /* Light Mode */
+  --bg: #EFEFEF;
+  --primary: #171717;
+  --secondary: #636363;
+  --text: #171717;
+  --text-muted: #636363;
+  --btn-text: #EFEFEF;
+  --border: #d4d4d4;
+  
+  --sans: 'DM Sans', system-ui, -apple-system, sans-serif;
+
+  font-family: var(--sans);
+  line-height: 1.5;
+  font-weight: 400;
+
+  color: var(--text);
+  background-color: var(--bg);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Dark Mode - Inverted */
+    --bg: #171717;
+    --primary: #EFEFEF;
+    --secondary: #636363;
+    --text: #EFEFEF;
+    --text-muted: #636363;
+    --btn-text: #171717;
+    --border: #2a2a2a;
+  }
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  height: 100vh;
+  overflow: hidden;
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+#root {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 2rem;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
