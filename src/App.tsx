@@ -1,5 +1,6 @@
 import { useState, useEffect, useMemo } from 'react'
 import quotesData from './quotes.json'
+import { Forward } from 'lucide-react'
 
 interface Task {
   id: number
@@ -80,7 +81,7 @@ function App() {
     <>
       {/* Header */}
       <div className="text-left mb-6 shrink-0">
-        <h1 className="text-3xl font-bold tracking-tight text-[var(--primary)] m-0 leading-tight">
+        <h1 className="text-3xl font-bold tracking-tight text-[var(--primary)] mt-3 leading-tight">
           {getGreeting()}
         </h1>
         <p className="text-sm text-[var(--text-muted)] mt-1">
@@ -89,7 +90,7 @@ function App() {
       </div>
 
       {/* Input da tarefa */}
-      <div className="flex gap-3 mb-6 items-center max-sm:flex-col shrink-0">
+      <div className="flex gap-3 mb-6 items-center shrink-0">
         <input
           id="inputTask"
           type="text"
@@ -97,14 +98,17 @@ function App() {
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
           onKeyDown={handleKeyDown}
-          className="flex-1 py-2.5 px-0 text-sm font-[inherit] bg-transparent border-0 border-b border-[var(--border)] text-[var(--text)] outline-none transition-colors duration-200 placeholder:text-[var(--text-muted)] focus:border-b-[var(--primary)] max-sm:w-full"
+          className="flex-1 py-2.5 px-0 text-base font-[inherit] bg-transparent border-0 border-b border-[var(--border)] text-[var(--text)] outline-none transition-colors duration-200 placeholder:text-[var(--text-muted)] focus:border-b-[var(--primary)] max-sm:w-full"
         />
         <button
           id="newTaskBtn"
           onClick={addTask}
-          className="py-2.5 px-5 text-sm font-semibold font-[inherit] bg-[var(--primary)] text-[var(--btn-text)] border-none rounded-lg cursor-pointer whitespace-nowrap transition-all duration-200 hover:opacity-85 active:scale-[0.97] max-sm:w-full"
+          className="py-2.5 px-5 text-sm font-semibold font-[inherit] bg-[var(--primary)] text-[var(--btn-text)] border-none rounded-lg cursor-pointer whitespace-nowrap transition-all duration-200 hover:opacity-85 active:scale-[0.97]"
         >
-          Adicionar tarefa
+          <span className='hidden sm:inline'>Adicionar tarefa</span>
+          <span className='sm:hidden'>
+            <Forward size={22} />
+          </span>
         </button>
       </div>
 
