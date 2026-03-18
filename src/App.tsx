@@ -1,6 +1,6 @@
 import { useState, useEffect, useMemo } from 'react'
 import quotesData from './quotes.json'
-import { Forward } from 'lucide-react'
+import { Plus } from 'lucide-react'
 
 interface Task {
   id: number
@@ -107,7 +107,7 @@ function App() {
         >
           <span className='hidden sm:inline'>Adicionar tarefa</span>
           <span className='sm:hidden'>
-            <Forward size={22} />
+            <Plus size={22} />
           </span>
         </button>
       </div>
