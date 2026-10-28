@@ -8,8 +8,6 @@ Simplelist - Keep it simple. Minimalista e focado no essencial.
 
 - **To-do List:** Lista de tarefas com persistência local.
 
-Sinta-se a vontade para contribuir para o projeto com novas funcionalidades e melhorias.
-
 ## Tecnologias
 
 - React (com TypeScript)
@@ -37,12 +35,6 @@ Sinta-se a vontade para contribuir para o projeto com novas funcionalidades e me
    ```bash
    npm run dev
    ```
-
-## Contribua!
-
-Contribuições são o que fazem a comunidade open-source um lugar incrível para aprender, inspirar e criar. Qualquer contribuição que você fizer será **muito apreciada**.
-
-Leia nosso [Guia de Contribuição](CONTRIBUTING.md) para saber como começar.
 
 ## Licença
 
